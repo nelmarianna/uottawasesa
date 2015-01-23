@@ -15,7 +15,6 @@ gem 'thin'
 gem 'devise'
 gem 'sprockets', '>=2.11.0'
 gem 'slim', '>=2.0.0'
-gem 'redcarpet', ">=3.1.1"
 gem 'paperclip', '>=3.5.3'
 gem 'paperclip-aws'
 gem 'aws-sdk'
@@ -25,6 +24,11 @@ gem 'jquery-rails', '>=3.0.4'
 gem 'jquery-ui-rails'
 gem 'turbolinks', '>=1.1.1'
 gem 'jbuilder', '>=1.0.2'
+
+
+#blog
+gem 'epic-editor-rails' #embeddable markdown editor
+gem 'redcarpet' #markdown parser
 
 group :development do
 	gem 'pry'

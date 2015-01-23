@@ -15,6 +15,7 @@
 //= require foundation
 //= require jquery-ui/effect-slide
 //= require turbolinks
+//= require epiceditor
 //= require_tree 
 
 
