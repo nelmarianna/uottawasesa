@@ -1,8 +1,7 @@
 Uottawasesa::Application.routes.draw do
 
-
+  devise_for :users
   root "static_pages#home"
-
 
   get "/join" => "static_pages#join", as: 'join'
   post "/join" => "static_pages#create"

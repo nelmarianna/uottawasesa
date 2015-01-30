@@ -12,7 +12,6 @@ gem 'foundation-rails', '>=5.3.1.0'
 gem 'sass', '>=3.2.13'
 gem 'protected_attributes', '>=1.0.5'
 gem 'thin'
-gem 'devise'
 gem 'sprockets', '>=2.11.0'
 gem 'slim', '>=2.0.0'
 gem 'redcarpet', ">=3.1.1"
@@ -25,6 +24,10 @@ gem 'jquery-rails', '>=3.0.4'
 gem 'jquery-ui-rails'
 gem 'turbolinks', '>=1.1.1'
 gem 'jbuilder', '>=1.0.2'
+
+# user accounts stuff
+gem 'devise'
+gem 'cancan'
 
 group :development do
 	gem 'pry'
