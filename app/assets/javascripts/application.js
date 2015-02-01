@@ -15,7 +15,8 @@
 //= require foundation
 //= require jquery-ui/effect-slide
 //= require turbolinks
-//= require_tree 
+//= require 'epiceditor'  
+//= require_tree .
 
 $(function(){ $(document).foundation(); });
 
@@ -24,7 +25,6 @@ if(window.innerWidth > 650){
 }
 
 $(document).ready(function(){ start(); });
-// $(function(){start();})
 
 window.onresize = function() {
 	start(); 
@@ -210,4 +210,3 @@ $(function(){
 });
 
 });
-

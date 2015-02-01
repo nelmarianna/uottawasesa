@@ -1,5 +1,8 @@
 Uottawasesa::Application.routes.draw do
 
+  resources :blog_posts
+  #resources :exam_archive
+  
   devise_for :users
   root "static_pages#home"
 
@@ -9,8 +12,6 @@ Uottawasesa::Application.routes.draw do
   get "/events" => "static_pages#events", as: 'events'
   get "/members" => "static_pages#members", as: 'members'
 
-  resources :exam_archive
-  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

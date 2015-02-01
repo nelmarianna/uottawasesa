@@ -29,6 +29,9 @@ gem 'jbuilder', '>=1.0.2'
 gem 'devise'
 gem 'cancan'
 
+#blog stuff
+gem 'epic-editor-rails'
+
 group :development do
 	gem 'pry'
 end

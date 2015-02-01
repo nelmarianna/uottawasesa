@@ -71,6 +71,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    epic-editor-rails (0.2.3)
+      railties (>= 3.2, < 5.0)
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
@@ -282,6 +284,7 @@ DEPENDENCIES
   cancan
   childprocess (>= 0.3.6)
   devise
+  epic-editor-rails
   foundation-rails (>= 5.3.1.0)
   guard-rspec (>= 2.5.0)
   guard-spork (>= 1.5.0)

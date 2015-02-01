@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="small-12 small-centered medium-10 columns">
+    <%= form_for @post, html: {class: 'form-box'} do |form| %>
+      <div class="row">
+        <div class="small-1 columns">
+          <%= form.label :title, id: 'title-label' %>
+        </div>
+
+        <div class="small-11 columns">
+          <%= form.text_field :title, class: 'input-line' %>
+        </div>
+      </div>
+
+      <%= form.label "Body" %>
+      <div id="epiceditor" class='editor-box'>
+      </div>
+
+      <%= hidden_field_tag "body_field" %>
+
+      <div class="row">
+        <div class="small-12 medium-3 medium-offset-3 columns">
+          <%= form.submit "Discard", name: "discard", class: "button alert expand" %>
+        </div>
+
+        <div class="small-12 medium-3 columns">
+          <%= form.submit "Save as draft", class: "button expand", id: "save_button" %>
+        </div>
+
+        <div class="small-12 medium-3 columns">
+          <%= form.submit "Publish", class: "button success expand", id: "publish_button" %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+</div>
