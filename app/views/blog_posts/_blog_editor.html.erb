@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 small-centered medium-10 columns">
-    <%= form_for @post, html: {class: 'form-box'} do |form| %>
+    <%= form_for @blog_post, html: {class: 'form-box'} do |form| %>
       <div class="row">
         <div class="small-1 columns">
           <%= form.label :title, id: 'title-label' %>
@@ -19,15 +19,15 @@
 
       <div class="row">
         <div class="small-12 medium-3 medium-offset-3 columns">
-          <%= form.submit "Discard", name: "discard", class: "button alert expand" %>
+          <%= form.submit "Discard", class: "button alert expand", id: "discard_button", name: "discard" %>
         </div>
 
         <div class="small-12 medium-3 columns">
-          <%= form.submit "Save as draft", class: "button expand", id: "save_button" %>
+          <%= form.submit "Save as draft", class: "button expand", id: "save_button", name: "save" %>
         </div>
 
         <div class="small-12 medium-3 columns">
-          <%= form.submit "Publish", class: "button success expand", id: "publish_button" %>
+          <%= form.submit "Publish", class: "button success expand", id: "publish_button", name: "publish" %>
         </div>
       </div>
 
