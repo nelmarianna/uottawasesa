@@ -6,7 +6,7 @@ class BlogPostsController < ApplicationController
   def create
     return if params[:discard] #TODO redirect somewhere
 
-    @blog_post = BlogPost.new(blog_params)
+    @blog_post = BlogPost.new(blog_post_params)
     #TODO add author
 
     if params[:save]
@@ -48,8 +48,8 @@ class BlogPostsController < ApplicationController
   end
 
   private
-  def blog_params
-    params.require(:blog_post).permit(:title)
+  def blog_post_params
+    params.require(:blog_post).permit(:title, :body_field)
   end
 
   def user_is_blogger

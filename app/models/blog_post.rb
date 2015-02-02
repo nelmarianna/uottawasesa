@@ -1,26 +1,31 @@
 class BlogPost < ActiveRecord::Base
-  attr_accessor :temp_body
+  include MarkdownFileHelper
 
+  before_validation :get_blog_file_name
+  after_save :save_blog_file
+  
+  attr_accessor :body_field
   belongs_to :user
-
-  has_attached_file :body
-  validates_attachment_content_type :body, content_type: /.*\.md/
 
   #TODO validations
 
-  def create_server_file(content)
+  def get_blog_file_name
+    self.body_file_name = generate_filename
+  end
 
+  def save_blog_file
+    update_file(self.body_file_name, @body_field)
   end
 
   def get_author_name
-
+    #TODO
   end
 
   def get_author_email
-
+    #TODO
   end
 
   def get_author_id
-
+    #TODO
   end
 end

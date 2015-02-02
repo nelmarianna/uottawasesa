@@ -20,7 +20,7 @@ $(document).ready(function() {
 
     //Sends the local file to the server as the blog body
     $("#publish_button, #save_button").click(function(e) {
-      $("#body_field").val(editor.exportFile());
+      $("#blog_post_body_field").val(editor.exportFile());
     });
 
     //clears the local file
