@@ -15,9 +15,6 @@ gem 'thin'
 gem 'sprockets', '>=2.11.0'
 gem 'slim', '>=2.0.0'
 gem 'redcarpet', ">=3.1.1"
-gem 'paperclip', '>=3.5.3'
-gem 'paperclip-aws'
-gem 'aws-sdk'
 gem 'sass-rails', '>=4.0.1'
 gem 'uglifier', '>=2.1.1'
 gem 'jquery-rails', '>=3.0.4'
@@ -31,6 +28,7 @@ gem 'cancan'
 
 #blog stuff
 gem 'epic-editor-rails'
+gem 'redcarpet', ">=3.1.1"
 
 group :development do
 	gem 'pry'

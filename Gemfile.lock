@@ -37,11 +37,6 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
-    aws-sdk (1.61.0)
-      aws-sdk-v1 (= 1.61.0)
-    aws-sdk-v1 (1.61.0)
-      json (~> 1.4)
-      nokogiri (>= 1.4.4)
     bcrypt (3.1.9)
     bcrypt (3.1.9-x86-mingw32)
     builder (3.2.2)
@@ -145,9 +140,6 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
-    paperclip-aws (1.6.8)
-      aws-sdk (>= 1.2.0)
-      paperclip (>= 2.5.0)
     pg (0.18.1)
     pg (0.18.1-x86-mingw32)
     protected_attributes (1.0.8)
@@ -280,7 +272,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  aws-sdk
   cancan
   childprocess (>= 0.3.6)
   devise
@@ -292,8 +283,7 @@ DEPENDENCIES
   jquery-rails (>= 3.0.4)
   jquery-ui-rails
   listen
-  paperclip (>= 3.5.3)
-  paperclip-aws
+  paperclip (~> 4.2)
   pg
   protected_attributes (>= 1.0.5)
   pry
