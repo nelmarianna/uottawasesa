@@ -21,6 +21,7 @@ gem 'jbuilder', '>=1.0.2'
 gem 'actionview-encoded_mail_to'
 gem 'devise', github: 'plataformatec/devise'
 gem 'react-rails', '~> 1.6', '>= 1.6.2'
+gem 'rack-attack'
 
 group :development do
 	gem 'pry'

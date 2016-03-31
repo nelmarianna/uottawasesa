@@ -1,4 +1,7 @@
+var LinkedStateMixin = React.addons.LinkedStateMixin;
+
 var MyFormInput = React.createClass({
+  mixins: [LinkedStateMixin],
   getInitialState: function() {
     return {
       firstName: '',
@@ -55,73 +58,40 @@ var MyFormInput = React.createClass({
     return (
       <form role='form' onSubmit={this.handleSubmit} acceptCharset='UTF-8'>
         <FormLabel id={"firstName"} label={"First Name"}>
-          <FormTextInput className={"form-control"} id={"firstName"} value={this.state.firstName} onChangeHander={this.handleFirstNameChange} />
+          <FormTextInput className={"form-control"} id={"firstName"} valueLink={this.linkState('firstName')} required />
         </FormLabel>
         <FormLabel id={"lastName"} label={"Last Name"}>
-          <FormTextInput className={"form-control"} id={"lastName"} value={this.state.lastName} onChangeHander={this.handleLastNameChange} />
+          <FormTextInput className={"form-control"} id={"lastName"} valueLink={this.linkState('lastName')} required />
         </FormLabel>
         <FormLabel id={"faculty"} label={"Faculty"}>
-          <FormTextInput className={"form-control"} id={"faculty"} value={this.state.faculty} onChangeHander={this.handleFacultyChange} placeholder={"Faculty of Engineering"} />
+          <FormTextInput className={"form-control"} id={"faculty"} valueLink={this.linkState('faculty')} placeholder={"Faculty of Engineering"} />
         </FormLabel>
         <FormLabel id={"programOfStudy"} label={"Program of Study"}>
-          <FormTextInput className={"form-control"} id={"programOfStudy"} value={this.state.programOfStudy} onChangeHander={this.handleProgramOfStudyChange} placeholder={"Software Engineering"} />
+          <FormTextInput className={"form-control"} id={"programOfStudy"} valueLink={this.linkState('programOfStudy')} placeholder={"Software Engineering"} />
         </FormLabel>
         <FormLabel id={"email"} label={"Please enter your preferred email address for contact"}>
-          <FormTextInput type={"email"} className={"form-control"} id={"email"} value={this.state.email} onChangeHander={this.handleEmailChange} placeholder={"esmith007@uottawa.ca"} />
+          <FormTextInput type={"email"} className={"form-control"} id={"email"} valueLink={this.linkState('email')} placeholder={"esmith007@uottawa.ca"} required />
         </FormLabel>
         <FormLabel id={"commitments"} row={"3"} label={"Other commitments during the year (e.g. Co-op, Exchange, Part-time job, Other extracurriculars, Other clubs, etc.)"}>
-          <FormTextArea className={"form-control"} id={"commitments"} value={this.state.commitments} onChangeHander={this.handleCommitmentsChange} />
+          <FormTextArea className={"form-control"} id={"commitments"} valueLink={this.linkState('commitments')} />
         </FormLabel>
         <FormLabel id={"linkedInUrl"} label={"LinkedIn URL"}>
-          <FormTextInput className={"form-control"} id={"linkedInUrl"} value={this.state.linkedInUrl} onChangeHander={this.handleLinkedInUrlChange} />
+          <FormTextInput className={"form-control"} id={"linkedInUrl"} valueLink={this.linkState('linkedInUrl')} />
         </FormLabel>
         <FormLabel id={"githubUrl"} label={"Github URL"}>
-          <FormTextInput className={"form-control"} id={"githubUrl"} value={this.state.githubUrl} onChangeHander={this.handleGithubUrlChange} />
+          <FormTextInput className={"form-control"} id={"githubUrl"} valueLink={this.linkState('githubUrl')} />
         </FormLabel>
         <FormLabel id={"whyGoodCandidate"} row={"3"} label={"Why would you be a good candidate?"}>
-          <FormTextArea className={"form-control"} id={"whyGoodCandidate"} value={this.state.whyGoodCandidate} onChangeHander={this.handleWhyGoodCandidateChange} />
+          <FormTextArea className={"form-control"} id={"whyGoodCandidate"} valueLink={this.linkState('whyGoodCandidate')} />
         </FormLabel>
         <FormLabel id={"resumeUrl"} label={"Resume URL (Dropbox, Google Docs, etc.)"}>
-          <FormTextInput className={"form-control"} id={"resumeUrl"} value={this.state.resumeUrl} onChangeHander={this.handleResumeUrlChange} />
+          <FormTextInput className={"form-control"} id={"resumeUrl"} valueLink={this.linkState('resumeUrl')} />
         </FormLabel>
         <FormLabel id={"additionalInfo"} row={"3"} label={"Anything else?"}>
-          <FormTextArea className={"form-control"} id={"additionalInfo"} value={this.state.additionalInfo} onChangeHander={this.handleAdditionalInfoChange} />
+          <FormTextArea className={"form-control"} id={"additionalInfo"} valueLink={this.linkState('additionalInfo')} />
         </FormLabel>
         <input type="submit" value="Apply" className="signup" />
       </form>
     );
-  },
-  handleFirstNameChange: function(e) {
-    this.setState({firstName: e.target.value});
-  },
-  handleLastNameChange: function(e) {
-    this.setState({lastName: e.target.value});
-  },
-  handleFacultyChange: function(e) {
-    this.setState({faculty: e.target.value});
-  },
-  handleProgramOfStudyChange: function(e) {
-    this.setState({programOfStudy: e.target.value});
-  },
-  handleEmailChange: function(e) {
-    this.setState({email: e.target.value});
-  },
-  handleCommitmentsChange: function(e) {
-    this.setState({commitments: e.target.value});
-  },
-  handleLinkedInUrlChange: function(e) {
-    this.setState({linkedInUrl: e.target.value});
-  },
-  handleGithubUrlChange: function(e) {
-    this.setState({githubUrl: e.target.value});
-  },
-  handleWhyGoodCandidateChange: function(e) {
-    this.setState({whyGoodCandidate: e.target.value});
-  },
-  handleResumeUrlChange: function(e) {
-    this.setState({resumeUrl: e.target.value});
-  },
-  handleAdditionalInfoChange: function(e) {
-    this.setState({additionalInfo: e.target.value});
   }
 });

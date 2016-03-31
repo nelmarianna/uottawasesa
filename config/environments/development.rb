@@ -55,7 +55,8 @@ Rails.application.configure do
 
   # ReactJS
   config.react.variant = :development
-
+  config.react.addons = true
+  
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

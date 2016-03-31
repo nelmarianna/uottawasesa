@@ -121,6 +121,8 @@ GEM
     puma (3.1.0)
     rack (2.0.0.alpha)
       json
+    rack-attack (4.4.1)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.beta3)
@@ -218,6 +220,7 @@ DEPENDENCIES
   pg
   pry
   puma
+  rack-attack
   rails (= 5.0.0.beta3)
   rails_12factor (>= 0.0.2)
   react-rails (~> 1.6, >= 1.6.2)

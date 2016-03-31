@@ -1,3 +1,18 @@
+header{
+  box-shadow: none;
+  height:80px;
+}
+
+::-moz-selection {
+    color: #FFFFFF;
+    background: #990012;
+}
+
+::selection {
+    color: #FFFFFF;
+    background: #990012;
+}
+
 .centered-container{
   padding: 25px;
   display: flex;

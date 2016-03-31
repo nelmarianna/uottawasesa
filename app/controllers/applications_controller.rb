@@ -1,4 +1,4 @@
-class ApplicationsController < ApplicationController
+class ApplicationsController < ActionController::API
   def create
     @application = Application.new(application_data)
 
